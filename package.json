@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-security-fcc",
+  "name": "hardhat-security",
   "version": "1.0.0",
   "description": "", 
   "devDependencies": {
@@ -23,9 +23,10 @@
   },
   "scripts": {
     "slither": "slither . --solc-remaps '@openzeppelin=node_modules/@openzeppelin @chainlink=node_modules/@chainlink' --exclude naming-convention,external-function,low-level-calls",
-    "toolbox": "docker run -it --rm -v $PWD:/src trailofbits/eth-security-toolbox",
+    "pull": "docker pull trailofbits/eth-security-toolbox",
+    "toolbox": "docker run -it trailofbits/eth-security-toolbox", 
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
     "format": "prettier --write ."
-  }
+  } 
 }
